@@ -40,12 +40,12 @@ class RedisCacheStore extends CacheStoreBase {
 			if ( !isset( self::$presets[ $config['preset'] ] ) ) {
 				throw new Exception( "Unknown Redis preset '{$config['preset']}'" );
 			}
-			$config = array_merge( self::$presets[ $config['preset'] ], $config );
 			if ( $config['preset'] === 'toollabs'
 				&& ( !isset( $config['prefix'] ) || strlen( $config['prefix'] ) < 10 )
 			) {
 				throw new Exception( 'Redis prefix is required in Tool Labs.' );
 			}
+			$config = array_merge( self::$presets[ $config['preset'] ], $config );
 		}
 
 		if ( !isset( $config['host'] ) ) {
