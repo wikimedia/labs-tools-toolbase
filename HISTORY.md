@@ -1,3 +1,13 @@
+## v2.3.0
+
+2026-09-30
+
+This release requires PHP 8.3 or later.
+
+### Fixed
+
+* Fix various links following the move to Wikimedia Gerrit
+
 ## v2.2.0
 
 2025-07-29

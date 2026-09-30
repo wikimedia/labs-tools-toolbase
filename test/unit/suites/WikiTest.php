@@ -12,9 +12,6 @@ class WikiTest extends PHPUnit\Framework\TestCase {
 		$this->assertFalse( $wiki2 === $wiki3, 'bar');
 	}
 
-	/**
-	 * @covers Wiki::getPageUrl
-	 */
 	public function testGetPageUrl() {
 		$wiki = WikiMock::byDbname( 'foo' );
 
@@ -26,9 +23,6 @@ class WikiTest extends PHPUnit\Framework\TestCase {
 		);
 	}
 
-	/**
-	 * @covers Wiki::getUrl
-	 */
 	public function testGetUrl() {
 		$wiki = WikiMock::byDbname( 'foo' );
 
