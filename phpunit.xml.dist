@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" bootstrap="test/unit/bootstrap.php" colors="true">
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+  bootstrap="test/unit/bootstrap.php"
+  colors="true"
+  displayDetailsOnPhpunitDeprecations="true"
+>
   <testsuites>
     <testsuite name="Test Suite">
       <directory>test/unit/suites/</directory>
     </testsuite>
   </testsuites>
-  <coverage includeUncoveredFiles="true">
+  <source>
     <include>
       <directory suffix=".php">src</directory>
     </include>
+  </source>
+  <coverage includeUncoveredFiles="true">
   </coverage>
 </phpunit>

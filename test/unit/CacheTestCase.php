@@ -1,5 +1,8 @@
 <?php
-abstract class CacheTestCase extends PHPUnit\Framework\TestCase {
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\TestCase;
+
+abstract class CacheTestCase extends TestCase {
 	protected $cache;
 
 	public static function provideValues() {
@@ -15,9 +18,7 @@ abstract class CacheTestCase extends PHPUnit\Framework\TestCase {
 		);
 	}
 
-	/**
-	 * @dataProvider provideValues
-	 */
+	#[DataProvider('provideValues')]
 	public function testValues( $key, $value ) {
 		$this->assertFalse( $this->cache->get( $key ) );
 
